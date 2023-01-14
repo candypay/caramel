@@ -26,8 +26,7 @@
     "pako": "^2.1.0",
     "react": "18.2.0",
     "react-dom": "18.2.0",
-    "react-icons": "^4.7.1",
-    "sdk": "http://localhost:3000/api/v1/tarball?data=eJyrVipITM5OTE%2BNz0xRslIyTzZMNjRLNddNNTFP1DUxMTHTTUwytdBNtLA0M040TE4yTTZVqgUAreEPKg%3D%3D"
+    "react-icons": "^4.7.1"
   },
   "devDependencies": {
     "@chakra-ui/cli": "^2.3.0",

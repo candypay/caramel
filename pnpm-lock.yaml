@@ -26,7 +26,6 @@ specifiers:
   react: 18.2.0
   react-dom: 18.2.0
   react-icons: ^4.7.1
-  sdk: http://localhost:3000/api/v1/tarball?data=eJyrVipITM5OTE%2BNz0xRslIyTzZMNjRLNddNNTFP1DUxMTHTTUwytdBNtLA0M040TE4yTTZVqgUAreEPKg%3D%3D
   tailwindcss: ^3.2.4
   typescript: 4.8.3
 
@@ -47,7 +46,6 @@ dependencies:
   react: 18.2.0
   react-dom: 18.2.0_react@18.2.0
   react-icons: 4.7.1_react@18.2.0
-  sdk: '@localhost+3000/api/v1/tarball?data=eJyrVipITM5OTE%252BNz0xRslIyTzZMNjRLNddNNTFP1DUxMTHTTUwytdBNtLA0M040TE4yTTZVqgUAreEPKg%253D%253D'
 
 devDependencies:
   '@chakra-ui/cli': 2.3.0_bidgzm5cq2du6gnjtweqqjrrn4
@@ -5179,10 +5177,3 @@ packages:
     resolution: {integrity: sha512-rVksvsnNCdJ/ohGc6xgPwyN8eheCxsiLM8mxuE/t/mOVqJewPuO1miLpTHQiRgTKCLexL4MeAFVagts7HmNZ2Q==}
     engines: {node: '>=10'}
     dev: true
-
-  '@localhost+3000/api/v1/tarball?data=eJyrVipITM5OTE%252BNz0xRslIyTzZMNjRLNddNNTFP1DUxMTHTTUwytdBNtLA0M040TE4yTTZVqgUAreEPKg%253D%253D':
-    resolution: {tarball: http://localhost:3000/api/v1/tarball?data=eJyrVipITM5OTE%2BNz0xRslIyTzZMNjRLNddNNTFP1DUxMTHTTUwytdBNtLA0M040TE4yTTZVqgUAreEPKg%3D%3D}
-    name: sdk
-    version: 0.0.0
-    engines: {node: '>=14.0.0'}
-    dev: false
