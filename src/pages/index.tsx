@@ -1,16 +1,17 @@
 import { Hero } from "@/components/Sections/Hero";
 import { PackageSection } from "@/components/Sections/Package";
+import { packages } from "@/lib/constants/packages";
 import type { NextPage } from "next";
 
 const Home: NextPage = () => {
   return (
-    <div className="min-h-screen w-full flex justify-center items-center py-24 bg-[#10100E] text-white flex-col">
-      {/* {packages.map((pkg, index) => (
-        <CheckoutBtn key={index} {...pkg} />
-      ))} */}
+    <div className="min-h-screen w-full flex items-center py-24 bg-[#10100E] text-white flex-col">
       <Hero />
 
-      <PackageSection />
+      {Object.keys(packages).map((key) => {
+        const metadata = packages[key];
+        return <PackageSection key={key} {...metadata} package_uid={key} />;
+      })}
     </div>
   );
 };
