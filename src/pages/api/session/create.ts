@@ -9,7 +9,7 @@ const handler: NextApiHandler = async (req, res) => {
       const response = await sdk.session.create({
         success_url: `${process.env.STATIC_URL}/success?package_id=${uid}`,
         cancel_url: `${process.env.STATIC_URL}/cancel`,
-        tokens: ["dust", "samo"],
+        tokens: ["dust", "bonk", "shdw"],
         items: [
           {
             image,
