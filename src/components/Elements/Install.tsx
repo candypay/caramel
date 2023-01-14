@@ -1,5 +1,5 @@
+import { useClipboard } from "@/hooks/useClipboard";
 import { ISuccessPageProps } from "@/typings/props";
-import { useClipboard } from "@chakra-ui/react";
 import { FC, useMemo } from "react";
 import { FiCopy } from "react-icons/fi";
 
