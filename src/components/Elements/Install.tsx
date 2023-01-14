@@ -1,6 +1,7 @@
 import { useClipboard } from "@/hooks/useClipboard";
 import { installationTool } from "@/typings/installationTool";
 import { FC, useMemo } from "react";
+import { BiCheck } from "react-icons/bi";
 import { FiCopy } from "react-icons/fi";
 
 interface IProps {
@@ -28,7 +29,13 @@ const InstallElement: FC<IProps> = ({ tool, installation_url }) => {
       </p>
 
       <div onClick={onCopy} className="cursor-pointer hover:text-neutral-300">
-        <FiCopy size={20} />
+        {hasCopied ? (
+          <span className="text-green-300">
+            <BiCheck size={20} />
+          </span>
+        ) : (
+          <FiCopy size={20} />
+        )}
       </div>
     </div>
   );

@@ -5,6 +5,7 @@ const genSession = async ({
   package_name,
   image,
   price,
+  package_uid,
 }: IPackage & {
   package_uid: string;
 }) => {
@@ -15,6 +16,7 @@ const genSession = async ({
       "Content-Type": "application/json",
     },
     data: {
+      package_uid,
       package_name,
       price,
       image,
