@@ -3,17 +3,17 @@ import { NextApiHandler } from "next";
 
 const handler: NextApiHandler = async (req, res) => {
   if (req.method === "POST") {
-    const { uid, name, price, image } = req.body;
+    const { package_uid, package_name, price, image } = req.body;
 
     try {
       const response = await sdk.session.create({
-        success_url: `${process.env.STATIC_URL}/success?package_id=${uid}`,
+        success_url: `${process.env.STATIC_URL}/success?package_id=${package_uid}`,
         cancel_url: `${process.env.STATIC_URL}/cancel`,
         tokens: ["dust", "bonk", "shdw"],
         items: [
           {
             image,
-            name,
+            name: package_name,
             price,
             quantity: 1,
           },

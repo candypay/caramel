@@ -1,7 +1,13 @@
 import { IPackage } from "@/typings/package";
 import axios, { AxiosRequestConfig } from "axios";
 
-const genSession = async ({ uid, name, image, price }: IPackage) => {
+const genSession = async ({
+  package_name,
+  image,
+  price,
+}: IPackage & {
+  package_uid: string;
+}) => {
   const options: AxiosRequestConfig = {
     url: "/api/session/create",
     method: "POST",
@@ -9,8 +15,7 @@ const genSession = async ({ uid, name, image, price }: IPackage) => {
       "Content-Type": "application/json",
     },
     data: {
-      uid,
-      name,
+      package_name,
       price,
       image,
     },

@@ -1,25 +1,13 @@
+import { packages } from "@/lib/constants/packages";
+import axios from "axios";
+import base64url from "base64url";
 import { NextApiHandler } from "next";
 import pako from "pako";
-import base64url from "base64url";
-import axios from "axios";
 
 interface IPayload {
   package_id: string;
   session_id?: string;
 }
-
-const packages: Record<
-  string,
-  {
-    package_name: string;
-    is_demo: boolean;
-  }
-> = {
-  "87b9f48c-90fe-4965-9f4d-38b21ca7637a": {
-    package_name: "@candypay/sdk",
-    is_demo: true,
-  },
-};
 
 const handler: NextApiHandler = async (req, res) => {
   if (req.method === "GET") {
