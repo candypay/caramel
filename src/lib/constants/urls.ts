@@ -1,3 +1,6 @@
-const API_URL = "http://localhost:3000/api/v1";
+const APP_URL =
+  process.env[`NODE_ENV`] === "development"
+    ? "http://localhost:3000"
+    : "https://solana-paid-packages.vercel.app";
 
-export { API_URL };
+export { APP_URL };

@@ -1,4 +1,4 @@
-import { API_URL } from "@/lib/constants/urls";
+import { APP_URL } from "@/lib/constants/urls";
 import { PayloadToBase64 } from "@/utils/helpers/conversions";
 import { GetServerSidePropsContext } from "next";
 
@@ -11,7 +11,7 @@ const withSuccess = async (ctx: GetServerSidePropsContext) => {
     package_id: package_id as string,
   });
 
-  const url = `${API_URL}/tarball?data=${base64}`;
+  const url = `${APP_URL}/api/tarball?data=${base64}`;
 
   return {
     props: {

@@ -1,3 +1,4 @@
+import { APP_URL } from "@/lib/constants/urls";
 import { sdk } from "@/lib/init/candypay";
 import { NextApiHandler } from "next";
 
@@ -7,8 +8,8 @@ const handler: NextApiHandler = async (req, res) => {
 
     try {
       const response = await sdk.session.create({
-        success_url: `${process.env.STATIC_URL}/success?package_id=${package_uid}`,
-        cancel_url: `${process.env.STATIC_URL}/cancel`,
+        success_url: `${APP_URL}/success?package_id=${package_uid}`,
+        cancel_url: `${APP_URL}/cancel`,
         tokens: ["dust", "bonk", "shdw"],
         items: [
           {
