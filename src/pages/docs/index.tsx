@@ -1,32 +1,31 @@
+declare let document: Document;
 import { withDocs } from "@/middlewares/withDocs";
+import styles from "@/styles/unset.module.scss";
+import Markdown from "marked-react";
 import type { GetServerSideProps, NextPage } from "next";
+import SyntaxHighlighter from "react-syntax-highlighter";
+import { github } from "react-syntax-highlighter/dist/cjs/styles/hljs";
 
-import { createElement, Fragment, useEffect, useState } from "react";
-import rehypeParse from "rehype-parse";
-import rehypeReact from "rehype-react";
-import { unified } from "unified";
-
-const text = `<h2>Hello, world!</h2>
-<p>Welcome to my page 👀</p>`;
-
-function useProcessor(text) {
-  const [Content, setContent] = useState(<Fragment></Fragment>);
-
-  useEffect(() => {
-    unified()
-      .use(rehypeParse, { fragment: true })
-      .use(rehypeReact, { createElement, Fragment })
-      .process(text)
-      .then((file) => {
-        setContent(file.result);
-      });
-  }, [text]);
-
-  return Content;
-}
+const renderer = {
+  code(snippet: string, lang: string) {
+    return (
+      <SyntaxHighlighter language={lang} style={github}>
+        {snippet}
+      </SyntaxHighlighter>
+    );
+  },
+};
 
 const Index: NextPage<{ docs: string }> = ({ docs }) => {
-  return <div>{}</div>;
+  if (typeof document === "undefined") {
+    return;
+  }
+
+  return (
+    <div className={`${styles.unreset} px-64 py-10`}>
+      <Markdown renderer={renderer}>{docs}</Markdown>
+    </div>
+  );
 };
 
 export default Index;

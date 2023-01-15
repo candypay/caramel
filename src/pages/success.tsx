@@ -10,7 +10,7 @@ const Success: NextPage<ISuccessPageProps> = ({ installation_url }) => {
   const [tool, setTool] = useState<installationTool>("pnpm");
 
   return (
-    <div className="min-h-screen w-full bg-brand-primary flex flex-col items-center justify-center text-white gap-3">
+    <div className="min-h-screen w-full bg-brand-primary font-primary flex flex-col items-center justify-center text-white gap-3">
       <p>To install the package, run the following command in your terminal:</p>
       <InstallElement {...{ installation_url, tool }} />
       <Select {...{ tool, setTool }} />
