@@ -3,6 +3,7 @@ import { PackageSection } from "@/components/Sections/Package";
 import { packages } from "@/lib/constants/packages";
 import { CandyPayProvider } from "@candypay/react-checkout-sdk";
 import type { NextPage } from "next";
+import Link from "next/link";
 
 const Home: NextPage = () => {
   return (
@@ -14,6 +15,17 @@ const Home: NextPage = () => {
           const metadata = packages[key];
           return <PackageSection key={key} {...metadata} package_uid={key} />;
         })}
+
+        <div className="flex mt-10 font-medium text-lg text-neutral-200">
+          <p>
+            Checkout the{" "}
+            <Link passHref href="/docs">
+              <span className="text-neutral-100 underline cursor-pointer">
+                Docs
+              </span>
+            </Link>
+          </p>
+        </div>
       </div>
     </CandyPayProvider>
   );
