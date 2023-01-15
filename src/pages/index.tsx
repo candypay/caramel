@@ -8,6 +8,8 @@ const Home: NextPage = () => {
     <div className="min-h-screen w-full flex items-center py-24 bg-[#10100E] text-white flex-col">
       <Hero />
 
+      {/* <MarkdownViewer markdownValue={docs} /> */}
+
       {Object.keys(packages).map((key) => {
         const metadata = packages[key];
         return <PackageSection key={key} {...metadata} package_uid={key} />;

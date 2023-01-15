@@ -1,4 +1,4 @@
-import { useClipboard } from "@/hooks/useClipboard";
+import { useClipboard } from "@/lib/hooks/useClipboard";
 import { installationTool } from "@/typings/installationTool";
 import { FC, useMemo } from "react";
 import { BiCheck } from "react-icons/bi";
