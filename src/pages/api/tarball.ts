@@ -1,11 +1,10 @@
-import { NextApiHandler } from "next";
-import axios from "axios";
-import base64url from "base64url";
-import pako from "pako";
-import { extractLongTokenHash } from "prefixed-api-key";
-
 import { packages } from "@/lib/constants/packages";
 import { prisma } from "@/lib/init/prisma";
+import axios from "axios";
+import base64url from "base64url";
+import { NextApiHandler } from "next";
+import pako from "pako";
+import { extractLongTokenHash } from "prefixed-api-key";
 
 interface IPayload {
   package_id: string;
@@ -15,6 +14,8 @@ interface IPayload {
 const handler: NextApiHandler = async (req, res) => {
   if (req.method === "GET") {
     const { authorization } = req.headers;
+    console.log(req.headers);
+
     const { data, version } = req.query;
 
     try {
@@ -31,6 +32,7 @@ const handler: NextApiHandler = async (req, res) => {
           token: tokenHash,
         },
       });
+      console.log(doesExist);
 
       if (!doesExist) {
         return res.status(401).json({
@@ -43,6 +45,7 @@ const handler: NextApiHandler = async (req, res) => {
           to: "string",
         })
       );
+      console.log(payload);
 
       if (!payload.package_id) {
         return res.status(400).json({
@@ -61,10 +64,10 @@ const handler: NextApiHandler = async (req, res) => {
         }
       );
 
-      const versionToBeInstalled =
-        version || registryResponse.data["dist-tags"].latest;
+      const versionToBeInstalled = registryResponse.data["dist-tags"].latest;
       const tarballUrl =
-        registryResponse.data.versions[versionToBeInstalled].tarball;
+        registryResponse.data.versions[versionToBeInstalled].dist.tarball;
+      console.log(tarballUrl);
 
       const tarballResponse = await axios.get(tarballUrl, {
         responseType: "stream",
@@ -79,6 +82,7 @@ const handler: NextApiHandler = async (req, res) => {
 
       tarballResponse.data.pipe(res);
     } catch (err) {
+      console.log(err);
       return res.status(500).json({
         error: "Internal server error",
       });

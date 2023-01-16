@@ -11,8 +11,8 @@ interface IProps {
 
 const InstallElement: FC<IProps> = ({ tool, installation_url }) => {
   const cmnd = useMemo(() => {
-    return `pnpm install ${installation_url}`;
-  }, [installation_url]);
+    return `${tool} install ${installation_url}`;
+  }, [installation_url, tool]);
 
   const { onCopy, hasCopied } = useClipboard(cmnd);
 
