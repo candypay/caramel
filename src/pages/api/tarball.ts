@@ -1,8 +1,11 @@
-import { packages } from "@/lib/constants/packages";
+import { NextApiHandler } from "next";
 import axios from "axios";
 import base64url from "base64url";
-import { NextApiHandler } from "next";
 import pako from "pako";
+import { extractLongTokenHash } from "prefixed-api-key";
+
+import { packages } from "@/lib/constants/packages";
+import { prisma } from "@/lib/init/prisma";
 
 interface IPayload {
   package_id: string;
@@ -11,12 +14,27 @@ interface IPayload {
 
 const handler: NextApiHandler = async (req, res) => {
   if (req.method === "GET") {
+    const { authorization } = req.headers;
     const { data, version } = req.query;
 
     try {
       if (!data) {
         return res.status(400).json({
           error: "Missing encoded data",
+        });
+      }
+
+      const tokenHash = extractLongTokenHash(authorization.substring(7));
+
+      const doesExist = await prisma.tokens.findUnique({
+        where: {
+          token: tokenHash,
+        },
+      });
+
+      if (!doesExist) {
+        return res.status(401).json({
+          error: "Unauthorized",
         });
       }
 

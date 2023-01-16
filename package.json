@@ -15,6 +15,7 @@
     "@candypay/checkout-sdk": "0.1.44-alpha",
     "@candypay/react-checkout-sdk": "0.1.6-alpha.1",
     "@fontsource/pt-mono": "^4.5.11",
+    "@prisma/client": "^4.8.1",
     "@radix-ui/react-icons": "^1.1.1",
     "@radix-ui/react-select": "^1.1.2",
     "@tanstack/react-query": "^4.22.0",
@@ -23,9 +24,11 @@
     "classnames": "^2.3.2",
     "framer-motion": "^7.10.3",
     "highlight.js": "^11.7.0",
+    "jsonwebtoken": "^9.0.0",
     "marked-react": "^1.3.2",
     "next": "13.1.1",
     "pako": "^2.1.0",
+    "prefixed-api-key": "^1.1.0",
     "prettier-plugin-tailwindcss": "^0.2.1",
     "react": "18.2.0",
     "react-dom": "18.2.0",
@@ -35,6 +38,7 @@
     "sass": "^1.57.1"
   },
   "devDependencies": {
+    "@types/jsonwebtoken": "^9.0.1",
     "@types/marked": "^4.0.8",
     "@types/node": "18.7.18",
     "@types/pako": "^2.0.0",
@@ -46,6 +50,7 @@
     "eslint-config-next": "12.3.0",
     "postcss": "^8.4.21",
     "prettier": "^2.8.3",
+    "prisma": "^4.8.1",
     "tailwindcss": "^3.2.4",
     "typescript": "4.8.3"
   }
