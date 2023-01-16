@@ -17,10 +17,6 @@ const renderer = {
 };
 
 const Index: NextPage<{ docs: string }> = ({ docs }) => {
-  if (typeof document === "undefined") {
-    return;
-  }
-
   return (
     <div className={`${styles.unreset} px-64 py-10`}>
       <Markdown renderer={renderer}>{docs}</Markdown>

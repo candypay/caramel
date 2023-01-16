@@ -25,7 +25,9 @@ const handler: NextApiHandler = async (req, res) => {
         });
       }
 
-      const tokenHash = extractLongTokenHash(authorization.substring(7));
+      const tokenHash = extractLongTokenHash(
+        (authorization as string).substring(7)
+      );
 
       const doesExist = await prisma.tokens.findUnique({
         where: {

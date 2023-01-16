@@ -5,7 +5,7 @@ import { BiCheck } from "react-icons/bi";
 import { FiCopy } from "react-icons/fi";
 
 interface IProps {
-  installation_url: string;
+  installation_url?: string;
   tool: installationTool;
 }
 
@@ -22,9 +22,9 @@ const InstallElement: FC<IProps> = ({ tool, installation_url }) => {
         <span className="text-purple-300">{tool}</span>{" "}
         <span className="text-orange-300">install</span>{" "}
         <span className="text-blue-300">
-          {installation_url.slice(0, 48) +
+          {installation_url?.slice(0, 48) +
             "..." +
-            installation_url.slice(-8, -1)}
+            installation_url?.slice(-8, -1)}
         </span>
       </p>
 

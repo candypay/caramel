@@ -1,7 +1,7 @@
 import { deflate } from "pako";
 
 interface IPayload {
-  session_id?: string;
+  session_id: string;
   package_id: string;
 }
 

@@ -25,7 +25,7 @@ const withSuccess = async (ctx: GetServerSidePropsContext) => {
 
     await prisma.tokens.create({
       data: {
-        token: token.longTokenHash,
+        token: token.longTokenHash as string,
         session_id: session_id as string,
       },
     });
