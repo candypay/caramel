@@ -38,7 +38,6 @@ specifiers:
   react-markdown: ^8.0.4
   react-syntax-highlighter: ^15.5.0
   sass: ^1.57.1
-  solana-paid-packages: 'link:'
   tailwindcss: ^3.2.4
   typescript: 4.8.3
   zod: ^3.20.2
@@ -70,7 +69,6 @@ dependencies:
   react-markdown: 8.0.4_w5j4k42lgipnm43s3brx6h3c34
   react-syntax-highlighter: 15.5.0_react@18.2.0
   sass: 1.57.1
-  solana-paid-packages: 'link:'
   zod: 3.20.2
   zod-to-ts: 1.1.2_ktl6u2nahemynl7zk4byli5am4
 
