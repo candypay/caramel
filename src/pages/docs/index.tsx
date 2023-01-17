@@ -4,7 +4,7 @@ import styles from "@/styles/unset.module.scss";
 import Markdown from "marked-react";
 import type { GetServerSideProps, NextPage } from "next";
 import SyntaxHighlighter from "react-syntax-highlighter";
-import { nightOwl } from "react-syntax-highlighter/dist/esm/styles/hljs";
+import { nightOwl } from "react-syntax-highlighter/dist/cjs/styles/hljs";
 
 const renderer = {
   code(snippet: string, lang: string) {
