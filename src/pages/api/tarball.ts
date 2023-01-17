@@ -14,7 +14,7 @@ interface IPayload {
 const handler: NextApiHandler = async (req, res) => {
   if (req.method === "GET") {
     const { authorization } = req.headers;
-    console.log(req.headers);
+    console.log(authorization);
 
     const { data, version } = req.query;
 
@@ -34,7 +34,6 @@ const handler: NextApiHandler = async (req, res) => {
           token: tokenHash,
         },
       });
-      console.log(doesExist);
 
       if (!doesExist) {
         return res.status(401).json({
@@ -47,7 +46,6 @@ const handler: NextApiHandler = async (req, res) => {
           to: "string",
         })
       );
-      console.log(payload);
 
       if (!payload.package_id) {
         return res.status(400).json({
@@ -69,7 +67,6 @@ const handler: NextApiHandler = async (req, res) => {
       const versionToBeInstalled = registryResponse.data["dist-tags"].latest;
       const tarballUrl =
         registryResponse.data.versions[versionToBeInstalled].dist.tarball;
-      console.log(tarballUrl);
 
       const tarballResponse = await axios.get(tarballUrl, {
         responseType: "stream",
