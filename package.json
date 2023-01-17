@@ -4,8 +4,7 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "pnpm prisma && next build",
-    "prisma": "pnpm prisma generate",
+    "build": "pnpm prisma generate && next build",
     "start": "next start",
     "lint": "next lint",
     "theme": "chakra-cli tokens src/theme/index.ts",
