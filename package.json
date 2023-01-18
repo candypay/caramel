@@ -28,6 +28,7 @@
     "jsonwebtoken": "^9.0.0",
     "marked-react": "^1.3.2",
     "next": "13.1.1",
+    "nextjs-progressbar": "^0.0.16",
     "pako": "^2.1.0",
     "prefixed-api-key": "^1.1.0",
     "prettier-plugin-tailwindcss": "^0.2.1",
