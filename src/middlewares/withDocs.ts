@@ -2,7 +2,7 @@ import axios from "axios";
 import { GetServerSidePropsContext } from "next";
 
 const withDocs = async (ctx: GetServerSidePropsContext) => {
-  const defaultDocs = await axios.get(
+  const registryResponse = await axios.get(
     `https://npm.pkg.github.com/@candypay/sdk`,
     {
       headers: {
@@ -11,7 +11,8 @@ const withDocs = async (ctx: GetServerSidePropsContext) => {
     }
   );
 
-  const md = defaultDocs.data.versions[`1.1.2`].readme;
+  const latestVersion = registryResponse.data["dist-tags"].latest;
+  const md = registryResponse.data.versions[latestVersion].readme;
 
   return {
     props: {

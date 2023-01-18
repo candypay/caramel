@@ -7,8 +7,8 @@ import Link from "next/link";
 
 const Home: NextPage = () => {
   return (
-    <CandyPayProvider publicApiKey={process.env.NEXT_PUBLIC_CP_API}>
-      <div className="min-h-screen font-primary w-full flex items-center py-24 bg-[#10100E] text-white flex-col">
+    <CandyPayProvider publicApiKey={process.env.NEXT_PUBLIC_CP_API as string}>
+      <div className="min-h-screen font-primary w-full flex items-center py-24 bg-brand-primary text-white flex-col">
         <Hero />
 
         {Object.keys(packages).map((key) => {

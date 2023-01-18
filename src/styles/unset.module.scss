@@ -1,9 +1,23 @@
 .unreset {
+  * {
+    // @apply font-primary;
+  }
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  p,
+  ul,
+  ol {
+    @apply font-primary;
+  }
   a {
-    @apply text-blue-700 underline;
+    @apply text-blue-400 underline;
   }
   p {
-    @apply my-4;
+    @apply my-4 text-neutral-300;
   }
 
   blockquote,
