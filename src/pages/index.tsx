@@ -1,17 +1,17 @@
+import Footer from "@/components/Misc/Footer";
+import Header from "@/components/Misc/Header";
 import { Hero } from "@/components/Sections/Hero";
-import { PackageSection } from "@/components/Sections/Package";
-import { packages } from "@/lib/constants/packages";
 import { CandyPayProvider } from "@candypay/react-checkout-sdk";
 import type { NextPage } from "next";
-import Link from "next/link";
 
 const Home: NextPage = () => {
   return (
     <CandyPayProvider publicApiKey={process.env.NEXT_PUBLIC_CP_API as string}>
-      <div className="min-h-screen font-primary w-full flex items-center py-24 bg-brand-primary text-white flex-col">
+      <div className="min-h-screen font-primary w-full flex items-center justify-center py-24 bg-[#0F111E] text-white flex-col">
+        <Header />
         <Hero />
-
-        {Object.keys(packages).map((key) => {
+        <Footer />
+        {/* {Object.keys(packages).map((key) => {
           const metadata = packages[key];
           return <PackageSection key={key} {...metadata} package_uid={key} />;
         })}
@@ -25,7 +25,7 @@ const Home: NextPage = () => {
               </span>
             </Link>
           </p>
-        </div>
+        </div> */}
       </div>
     </CandyPayProvider>
   );
