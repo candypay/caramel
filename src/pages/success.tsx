@@ -24,15 +24,15 @@ const Success: NextPage<ISuccessPageProps> = ({
       {!isExpired && !isInvalid && (
         <div className="flex flex-col gap-6 items-center">
           <p>
+            First, add this to your{" "}
+            <span className="text-purple-300">.npmrc</span> file:
+          </p>
+          <NPMElement {...{ token }} />
+          <p>
             To install the package, run the following command in your terminal:
           </p>
           <InstallElement {...{ installation_url, tool }} />
           <Select {...{ tool, setTool }} />
-          <p>
-            Next, add this to your{" "}
-            <span className="text-purple-300">.npmrc</span> file:
-          </p>
-          <NPMElement {...{ token }} />
         </div>
       )}
     </div>

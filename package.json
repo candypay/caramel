@@ -7,8 +7,6 @@
     "build": "pnpm prisma generate && next build",
     "start": "next start",
     "lint": "next lint",
-    "theme": "chakra-cli tokens src/theme/index.ts",
-    "theme:watch": "chakra-cli tokens src/theme/index.ts --watch",
     "format": "prettier --write ."
   },
   "dependencies": {
