@@ -7,6 +7,7 @@ const TokenElement: FC<{
   token?: string;
 }> = ({ token }) => {
   const { onCopy, hasCopied } = useClipboard(token!);
+  console.log(token);
 
   return (
     <div className="flex gap-2 items-center justify-center text-white font-mono border border-[#212121] rounded-md px-6 py-2">

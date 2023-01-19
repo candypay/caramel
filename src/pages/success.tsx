@@ -17,7 +17,6 @@ const Paid: NextPage<ISuccessPageProps> = ({
   installation_url,
 }) => {
   const [tool, setTool] = useState<installationTool>("pnpm");
-  console.log(isExpired, isInvalid);
 
   return (
     <div className="h-screen w-full flex bg-[#0F111E] text-white">
