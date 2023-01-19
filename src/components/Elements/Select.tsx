@@ -18,7 +18,7 @@ const Select: FC<IProps> = ({ tool, setTool }) => {
       }}
     >
       <SelectPrimitive.Trigger asChild aria-label="Tools">
-        <button className="flex items-center gap-2 border border-[#191919] py-1 px-4 rounded-md outline-none">
+        <button className="flex items-center gap-2 border border-[#212121] py-1 px-4 rounded-md outline-none">
           <SelectPrimitive.Value />
           <SelectPrimitive.Icon>
             <ChevronDownIcon />

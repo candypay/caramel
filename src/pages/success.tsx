@@ -1,6 +1,6 @@
 import { InstallElement } from "@/components/Elements/Install";
+import { NPMElement } from "@/components/Elements/NPM";
 import Select from "@/components/Elements/Select";
-import { TokenElement } from "@/components/Elements/Token";
 import Header from "@/components/Misc/Header";
 import { withSuccess } from "@/middlewares/withPackage";
 import { installationTool } from "@/typings/installationTool";
@@ -34,7 +34,7 @@ const Paid: NextPage<ISuccessPageProps> = ({
           <span className="text-purple-300">.npmrc</span> file:
         </p>
 
-        <TokenElement {...{ token }} />
+        <NPMElement {...{ token }} />
 
         <p>
           To install the package, run the following command in your terminal:

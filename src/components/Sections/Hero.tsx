@@ -1,5 +1,7 @@
+import { packages } from "@/lib/constants/packages";
 import Image from "next/image";
 import { FC } from "react";
+import { CheckoutBtn } from "../Misc/Checkout";
 
 const Hero: FC = () => {
   return (
@@ -14,10 +16,10 @@ const Hero: FC = () => {
           accusantium doloremque laudantium, totam rem aperiam, <br /> eaque
           ipsa quae ab illo inventore veritatis et quasi architecto
         </p>
-
-        <button className="bg-[#5344FF] w-[80%] py-1 rounded-md text-sm h-9 my-4">
-          Try a Demo Paid Package
-        </button>
+        {Object.keys(packages).map((key) => {
+          const metadata = packages[key];
+          return <CheckoutBtn key={key} {...metadata} package_uid={key} />;
+        })}
       </div>
 
       <Image
