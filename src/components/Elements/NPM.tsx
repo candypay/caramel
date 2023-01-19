@@ -13,7 +13,7 @@ const NPMElement: FC<{
   );
 
   return (
-    <div className="flex gap-2 items-center justify-center text-white font-mono border border-[#191919] rounded-md px-6 py-2">
+    <div className="flex gap-2 items-center justify-center text-white font-mono border border-[#212121] rounded-md px-6 py-2 bg-[#151729] max-w-xl w-full">
       <p>
         <span className="text-orange-300">
           {`@candypay:registry=${APP_URL}/api/tarball`} <br />

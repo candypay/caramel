@@ -17,7 +17,7 @@ const InstallElement: FC<IProps> = ({ tool, installation_url }) => {
   const { onCopy, hasCopied } = useClipboard(cmnd);
 
   return (
-    <div className="flex gap-2 items-center justify-center text-white font-mono border border-[#212121] rounded-md px-6 py-4">
+    <div className="flex gap-2 items-center justify-center text-white font-mono border border-[#212121] bg-[#151729] rounded-md px-6 py-4">
       <p>
         <span className="text-purple-300">{tool}</span>{" "}
         <span className="text-orange-300">install</span>{" "}

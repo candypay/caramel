@@ -34,19 +34,24 @@ const Paid: NextPage<ISuccessPageProps> = ({
             <Image src="/assets/check.svg" width={50} height={50} alt="check" />
 
             <p className="font-secondary text-2xl">Successfully Purchased</p>
-            <p className="font-primary">
-              First, add this to your{" "}
-              <span className="text-purple-300">.npmrc</span> file:
-            </p>
+            <div className="flex flex-col gap-4 mt-4">
+              <p className="font-primary text-left w-full max-w-xl">
+                1: First, add this to your{" "}
+                <span className="text-purple-300">.npmrc</span> file:
+              </p>
 
-            <NPMElement {...{ token }} />
+              <NPMElement {...{ token }} />
+              <div className="flex justify-between items-center w-full max-w-3xl">
+                <p>
+                  2: To install the package, run the following command in your
+                  terminal:
+                </p>
 
-            <p>
-              To install the package, run the following command in your
-              terminal:
-            </p>
-            <InstallElement {...{ installation_url, tool }} />
-            <Select {...{ tool, setTool }} />
+                <Select {...{ tool, setTool }} />
+              </div>
+
+              <InstallElement {...{ installation_url, tool }} />
+            </div>
           </>
         )}
       </div>{" "}
