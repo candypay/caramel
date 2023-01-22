@@ -24,13 +24,13 @@ const CheckoutBtn: FC<
 
   return (
     <button
-      className="bg-[#5344FF] w-[80%] py-1 rounded-md text-sm h-9 my-4 hover:brightness-110 flex justify-center items-center"
+      className="text-white rounded-md w-32 h-10 flex justify-center items-center bg-[#191919] font-medium hover:bg-[#2F2F2F] transition-colors duration-100"
       onClick={mutate}
     >
       {isLoading ? (
         <div className="h-2 w-2 bg-neutral-100 rounded-full animate-ping"></div>
       ) : (
-        `Try a Demo Paid Package`
+        `Buy for $${price}`
       )}
     </button>
   );
