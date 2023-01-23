@@ -11,7 +11,7 @@ After the payment is successfully done, the user will get a private link via whi
 ```json
 {
   "dependencies": {
-    "@candypay/sdk": "https://packages.candypay.fun/api/tarball?data=..."
+    "@candypay/sdk": "https://caramel-solana.vercel.app/api/tarball?data=..."
   }
 }
 ```
