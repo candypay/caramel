@@ -1,35 +1,30 @@
 import Image from "next/image";
 import { FC } from "react";
+import Link from "next/link";
 
 const Hero: FC = () => {
   return (
-    <div className="flex justify-between items-center gap-16 max-w-5xl w-full">
-      <div className="flex flex-col gap-3">
-        <p className="text-3xl font-bold font-secondary">
-          Paid NPM Packages, <br /> integrated with{" "}
-          <span className="text-purple-500">CandyPay</span>
-        </p>
-        <p className="text-neutral-300">
-          Sed ut perspiciatis unde omnis iste natus error sit voluptatem <br />
-          accusantium doloremque laudantium, totam rem aperiam, <br /> eaque
-          ipsa quae ab illo inventore veritatis et quasi architecto
-        </p>
-        <a
-          className="bg-[#5344FF] w-[80%] py-1 rounded-md text-sm h-9 my-4 hover:brightness-110 flex justify-center items-center"
-          href="#buy"
-        >
-          Try a Demo Paid Package
-        </a>
+   <>
+    <section className="text-gray-600 body-font border-b border-gray-800">
+    <div className="container max-w-5xl w-full pb-16 mx-auto flex py-12 md:flex-row flex-col items-center">
+    <div className="lg:flex-grow md:w-1/2 lg:pr-24 mb-12 md:pr-16 flex flex-col md:items-start md:text-left items-center text-center">
+        <h1 className="title-font text-3xl mb-4 font-bold font-secondary text-gray-100">Paid NPM Packages,
+        <br /> integrated with{" "}
+          <span className="text-[#5344FF]">CandyPay</span>
+        </h1>
+        <p className="mb-4 leading-relaxed text-gray-400"> Sed ut perspiciatis unde omnis iste natus error sit voluptatem
+          accusantium doloremque laudantium, totam rem aperiam, eaque
+          ipsa quae ab illo inventore veritatis et quasi architecto</p>
+        <div className="flex justify-center">
+          <Link className="inline-flex text-white bg-[#5344FF] border-0 py-2 px-40 focus:outline-none hover:brightness-90 rounded-md text-lg" href="#buy">Try now</Link>
+        </div>
       </div>
-
-      <Image
-        src="/assets/hero.svg"
-        alt="hero"
-        className="w-96 h-96"
-        width={500}
-        height={500}
-      />
+      <div className="lg:max-w-lg lg:w-full md:w-1/2 w-5/6 mb-6 md:mb-0">
+        <img className="object-cover object-center rounded" alt="hero" src="/assets/programmer.jpeg"/>
+      </div>
     </div>
+  </section>
+  </>
   );
 };
 
