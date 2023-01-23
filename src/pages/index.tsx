@@ -8,7 +8,9 @@ import type { NextPage } from "next";
 
 const Home: NextPage = () => {
   return (
-    <CandyPayProvider publicApiKey={process.env.NEXT_PUBLIC_CP_API as string}>
+    <CandyPayProvider
+      publicApiKey={process.env.NEXT_PUBLIC_CANDYPAY_API_KEY as string}
+    >
       <div className="min-h-screen min-h-screen font-primary w-full bg-[#0F111E]">
         <div className="flex items-center justify-center pt-24 text-white flex-col">
           <Header />
