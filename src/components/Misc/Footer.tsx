@@ -1,15 +1,12 @@
-import Link from "next/link";
-
 const Footer = () => {
   return (
-    <div className="py-8 w-full text-center">
-      <p className="text-center text-neutral-300">
-        A product by{" "}
-        <Link passHref href="https://twitter.com/candypayfun">
-          <span className="font-medium">CandyPay</span>
-        </Link>
-      </p>
-    </div>
+    <footer className="text-gray-600 body-font mx-auto">
+      <div className="px-5 py-10 mx-auto justify-content-center text-center w-full">
+        <a href="https://candypay.fun" className="text-gray-200 ml-1" rel="noopener noreferrer" target="_blank">Powered by CandyPay {" "} • The Payments layer
+          for Solana 🍭
+        </a>
+      </div>
+    </footer>
   );
 };
 

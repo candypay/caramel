@@ -8,7 +8,6 @@ const queryClient = new QueryClient();
 
 function MyApp({ Component, pageProps }: AppProps) {
   return (
-    // <CandyPayProvider publicApiKey={process.env.NEXT_PUBLIC_CANDYPAY_API_KEY}>
     <QueryClientProvider client={queryClient}>
       <NextNProgress
         color="#29D"
@@ -18,7 +17,6 @@ function MyApp({ Component, pageProps }: AppProps) {
       />
       <Component {...pageProps} />
     </QueryClientProvider>
-    // </CandyPayProvider>
   );
 }
 
