@@ -1,4 +1,4 @@
-# Solana Paid Packages
+# 🍮 Caramel
 
 A new way to monetize NPM packages via cryptocurrency, powered by [CandyPay](https://candypay.fun)
 
@@ -96,4 +96,4 @@ export { packages };
 
 Connect the application to Vercel and deploy it. Set the required environment variables and you're off!
 
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Fcandypay%2Fsolana-paid-packages&env=CANDYPAY_PRIVATE_API_KEY,NEXT_PUBLIC_CANDYPAY_API_KEY,GITHUB_TOKEN,GITHUB_USER_OR_ORG,JWT_SECRET,DATABASE_URL)
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Fcandypay%2Fcaramel&env=CANDYPAY_PRIVATE_API_KEY,NEXT_PUBLIC_CANDYPAY_API_KEY,GITHUB_TOKEN,GITHUB_USER_OR_ORG,JWT_SECRET,DATABASE_URL)
