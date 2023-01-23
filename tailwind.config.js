@@ -12,7 +12,7 @@ module.exports = {
         },
       },
       fontFamily: {
-        primary: ["Satoshi", "sans-serif"],
+        primary: ["Inter", "sans-serif"],
         secondary: ["Bespoke Serif", "serif"],
         mono: ["PT Mono", "monospace"],
       },
