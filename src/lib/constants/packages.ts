@@ -8,4 +8,5 @@ const packages: Record<string, IPackage> = {
     image: "https://candypay.fun/assets/logo.png",
   },
 };
+
 export { packages };
