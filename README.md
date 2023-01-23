@@ -1,6 +1,6 @@
 # 🍮 Caramel
 
-A new way to monetize NPM packages via cryptocurrency, powered by [CandyPay](https://candypay.fun)
+Seamlessly monetize open-source packages, powered by [CandyPay](https://candypay.fun)
 
 ## How it works?
 
