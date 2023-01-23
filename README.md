@@ -29,10 +29,11 @@ If all the validation checks passes then it returns the tarball URL for the pack
 
 ### Environment variables
 
-5 environment variables are needed:
+6 environment variables are needed:
 - `CANDYPAY_PRIVATE_API_KEY`
 - `NEXT_PUBLIC_CANDYPAY_API_KEY`
 - `GITHUB_TOKEN`: Personal access token with `read:packages` and `write:packages` scope
+- `GITHUB_USER_OR_ORG`: Username or name of the GitHub organization
 - `JWT_SECRET`: Secret used to sign JWT payload. Use the following command to create a secure JWT secret:
 
     ```bash
@@ -95,4 +96,4 @@ export { packages };
 
 Connect the application to Vercel and deploy it. Set the required environment variables and you're off!
 
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Fcandypay%2Fsolana-paid-packages&env=CANDYPAY_PRIVATE_API_KEY,NEXT_PUBLIC_CANDYPAY_API_KEY,GITHUB_TOKEN,JWT_SECRET,DATABASE_URL)
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Fcandypay%2Fsolana-paid-packages&env=CANDYPAY_PRIVATE_API_KEY,NEXT_PUBLIC_CANDYPAY_API_KEY,GITHUB_TOKEN,GITHUB_USER_OR_ORG,JWT_SECRET,DATABASE_URL)
