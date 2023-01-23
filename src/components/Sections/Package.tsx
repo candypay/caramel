@@ -27,11 +27,11 @@ const PackageSection: FC<
       <section className="text-gray-600 body-font border-b border-gray-800">
         <div className="container max-w-5xl w-full pb-16 mx-auto flex py-12 md:flex-row flex-col items-center">
           <div className="lg:flex-grow md:w-1/2 lg:pr-24  md:pr-16 flex flex-col md:items-start md:text-left items-center text-center">
-            <h1 className="title-font font-medium text-3xl text-gray-100">
+            <h1 className="title-font font-medium font-secondary text-3xl text-gray-100">
               Try buying a demo package
             </h1>
             <p className="leading-relaxed mt-4 text-gray-400">
-              Buy this demo SDK by paying in SOL, USDC, BONK, etc. to get a
+              Buy CandyPay NFT SDK by paying in $SOL, $BONK, etc. to get a
               unique download link for this package!
             </p>
           </div>
