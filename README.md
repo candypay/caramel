@@ -33,7 +33,7 @@ If all the validation checks passes then it returns the tarball URL for the pack
 - `CANDYPAY_PRIVATE_API_KEY`
 - `NEXT_PUBLIC_CANDYPAY_API_KEY`
 - `GITHUB_TOKEN`: Personal access token with `read:packages` and `write:packages` scope
-- `GITHUB_USER_OR_ORG`: Username or name of the GitHub organization
+- `NEXT_PUBLIC_GITHUB_USER_OR_ORG`: Username or name of the GitHub organization
 - `JWT_SECRET`: Secret used to sign JWT payload. Use the following command to create a secure JWT secret:
 
     ```bash
