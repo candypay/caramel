@@ -8,8 +8,8 @@ const NPMElement: FC<{
   token?: string;
 }> = ({ token }) => {
   const { onCopy, hasCopied } = useClipboard(
-    `@${process.env.GITHUB_USER_OR_ORG}:registry=${APP_URL}/api/tarball
-//${process.env.VERCEL_URL}/:_authToken=${token}`
+    `@${process.env.NEXT_PUBLIC_GITHUB_USER_OR_ORG}:registry=${APP_URL}/api/tarball
+//${APP_URL}/:_authToken=${token}`
   );
 
   const hiddenToken = token?.replace(/./g, "*");
