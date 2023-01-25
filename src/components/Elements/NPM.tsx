@@ -9,7 +9,7 @@ const NPMElement: FC<{
 }> = ({ token }) => {
   const { onCopy, hasCopied } = useClipboard(
     `@${process.env.NEXT_PUBLIC_GITHUB_USER_OR_ORG}:registry=${APP_URL}/api/tarball
-//${APP_URL}/:_authToken=${token}`
+//${APP_URL.split("/")[2]}/:_authToken=${token}`
   );
 
   const hiddenToken = token?.replace(/./g, "*");
@@ -18,9 +18,9 @@ const NPMElement: FC<{
     <div className="flex gap-2 items-center justify-center text-white font-mono border border-[#212121] rounded-md px-6 py-2 bg-[#151729] max-w-xl w-full">
       <p>
         <span className="text-orange-300">
-          {`@${process.env.GITHUB_USER_OR_ORG}:registry=${APP_URL}/api/tarball`}{" "}
+          {`@${process.env.NEXT_PUBLIC_GITHUB_USER_OR_ORG}:registry=${APP_URL}/api/tarball`}{" "}
           <br />
-          {`//${process.env.VERCEL_URL}/:_authToken=${hiddenToken}`}
+          {`//${APP_URL.split("/")[2]}/:_authToken=${hiddenToken}`}
         </span>
       </p>
 
