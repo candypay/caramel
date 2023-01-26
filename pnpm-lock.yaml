@@ -1,7 +1,7 @@
 lockfileVersion: 5.4
 
 specifiers:
-  '@candypay/checkout-sdk': 0.1.44-alpha
+  '@candypay/checkout-sdk': ^0.1.46
   '@candypay/react-checkout-sdk': 0.1.6-alpha.1
   '@fontsource/pt-mono': ^4.5.11
   '@prisma/client': ^4.8.1
@@ -42,7 +42,7 @@ specifiers:
   zod: ^3.20.2
 
 dependencies:
-  '@candypay/checkout-sdk': 0.1.44-alpha
+  '@candypay/checkout-sdk': 0.1.46
   '@candypay/react-checkout-sdk': 0.1.6-alpha.1_7ey2zzynotv32rpkwno45fsx4e
   '@fontsource/pt-mono': 4.5.11
   '@prisma/client': 4.8.1_prisma@4.8.1
@@ -148,8 +148,8 @@ packages:
       to-fast-properties: 2.0.0
     dev: false
 
-  /@candypay/checkout-sdk/0.1.44-alpha:
-    resolution: {integrity: sha512-vklbsJiwIqTZBRul9xo3kHiOpQMC6wOfV1KXmFW8iQiQsmiZaExRQqFDBRy1O93yL3JydQ5EeNvpm6p17oqfDQ==}
+  /@candypay/checkout-sdk/0.1.46:
+    resolution: {integrity: sha512-qumAaAYwlL9uRNmZe90QAsxbjXB2jqblBWBvJxenXigkAUm/qD8QWBm8LXrPDoxVr0ma7fPnglBtO7/RowvRAg==}
     dependencies:
       '@types/node': 18.7.18
       axios: 0.27.2

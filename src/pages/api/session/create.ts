@@ -17,7 +17,7 @@ const handler: NextApiHandler = async (req, res) => {
       const response = await sdk.session.create({
         success_url: `${APP_URL}/success?data=${token}`,
         cancel_url: `${APP_URL}/`,
-        tokens: ["bonk", "shdw"],
+        tokens: ["shdw", "bsol", "bonk"],
         items: [
           {
             image,

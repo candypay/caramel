@@ -10,7 +10,7 @@
     "format": "prettier --write ."
   },
   "dependencies": {
-    "@candypay/checkout-sdk": "0.1.44-alpha",
+    "@candypay/checkout-sdk": "^0.1.46",
     "@candypay/react-checkout-sdk": "0.1.6-alpha.1",
     "@fontsource/pt-mono": "^4.5.11",
     "@prisma/client": "^4.8.1",
